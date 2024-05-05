@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="¿Necesitas un programador web en Córdoba, Argentina? ¡Contáctame! Soy un desarrollador full stack con experiencia en HTML, CSS, JavaScript, React y Node.js. En mi portafolio encontrarás proyectos de desarrollo web y habilidades en Git y GitHub. También puedo ayudarte con preguntas de programación. ¡No dudes en contactarme!">
+    <meta name="author" content="romano napoleon" />
+    <link rel="icon" href="../img/retrato6.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&family=Raleway:ital,wght@0,200;0,500;1,200;1,500&family=Source+Serif+Pro:ital,wght@0,300;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Contacto | Programador web para contactar y solicitar servicios de diseño y desarrollo web personalizados
+        para su sitio web o negocio en línea</title>
+</head>
+
+<body class="contacto">
+    <header class="header-container">
+        <nav class="nav">
+            <ul id="ul">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="sobremi.html">Sobre mi</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="main">
+            <div class="headerbar" id="headerbar">
+                <div class="logo">
+                    <h1></h1>
+                </div>
+                <div class="toggle">
+                    <div class="header-hamburguesa" title="button-hamburguesassss">
+                        <span class="header-hamburguesa-line"></span>
+                        <span class="header-hamburguesa-line"></span>
+                        <span class="header-hamburguesa-line"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="banner" id="banner">
+        <div class="content">
+            <div class="contact-wrapper animated bounceInUp">
+                <main class="contact-form">
+                    <h3>Contacto</h3>
+                    <form id="contactForm">
+                        <p>
+                            <label>Nombre</label>
+                            <input type="text" name="fullname">
+                        </p>
+                        <p>
+                            <label>Email</label>
+                            <input type="email" name="email">
+                        </p>
+                        <p>
+                            <label>Numero de telefono</label>
+                            <input type="tel" name="phone">
+                        </p>
+                        <p>
+                            <label>Asunto</label>
+                            <input type="text" name="affair">
+                        </p>
+                        <p class="block">
+                            <label>Mensaje</label>
+                            <textarea name="message" rows="3"></textarea>
+                        </p>
+                        <p class="block">
+                            <button id="btnEnviar">
+                                Enviar
+                            </button>
+                        </p>
+                    </form>
+                </main>
+                <footer class="contact-info">
+                    <h4>Mas Informacion </h4>
+                    <br>
+                    <ul>
+                        <li><i class="fa fa-blind" aria-hidden="true"></i> Cordoba, Argentina</li>
+                        <li><i class="fa fa-bell-o" aria-hidden="true"></i> (+54) 111 111 1111</li>
+                        <li><i class="fa fa-envelope-open-o" aria-hidden="true"></i> romano@gmail.com</li>
+                    </ul>
+                    <p><br> Si necesitas aclarar alguna duda o quieres hacerme alguna sugerencia, estaré encantado de
+                        escucharte. Utiliza el formulario de contacto que aparece a continuación para ponerte en
+                        contacto conmigo. ¡Espero tu mensaje!</p>
+                    <p>romanonapoleon.netlify.app</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        let headerbar = document.querySelector('.headerbar');
+        let nav = document.querySelector(' .nav');
+        let main = document.querySelector(' .main');
+        let banner = document.querySelector(' .banner');
+        let toggle = document.querySelector('.toggle');
+        let content = document.querySelector('.content');
+        let contacto = document.querySelector(' .contacto');
+        toggle.onclick = function () {
+            toggle.classList.toggle('active');
+            headerbar.classList.toggle('active');
+            nav.classList.toggle('active');
+            main.classList.toggle('active');
+            banner.classList.toggle('active');
+            content.classList.toggle('active');
+            contacto.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
