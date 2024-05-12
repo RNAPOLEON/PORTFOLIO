@@ -1,3 +1,21 @@
+let headerbar = document.querySelector('.headerbar');
+let nav = document.querySelector(' .nav');
+let main = document.querySelector(' .main');
+let banner = document.querySelector(' .banner');
+let toggle = document.querySelector('.toggle');
+let content = document.querySelector('.content');
+let contacto = document.querySelector(' .contacto');
+toggle.onclick = function () {
+    toggle.classList.toggle('active');
+    headerbar.classList.toggle('active');
+    nav.classList.toggle('active');
+    main.classList.toggle('active');
+    banner.classList.toggle('active');
+    content.classList.toggle('active');
+    contacto.classList.toggle('active');
+}
+
+
 'use strict'
 
 const grande = document.querySelector('.grande')

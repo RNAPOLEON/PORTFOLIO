@@ -5,7 +5,7 @@
   box-sizing: border-box;
   caret-color: transparent;
 }
-
+  
 
 body {
   padding: 0;
@@ -13,6 +13,7 @@ body {
   background-color: #EBEBEB;
   height: 100vh;
   overflow: hidden;
+  color: #53657D;
 }
 
 body::-webkit-scrollbar {
@@ -23,574 +24,15 @@ body::-webkit-scrollbar-thumb {
   background-color: #53657D;
   border-radius: 10px;
 }
-
-/*Animacion del Inicio o index*/
-.headerbar .logo h1::after {
-  content: "CODERBY";
-  font-size: 1.1rem;
-  margin-left: -140px;
-  display: flex;
-  padding-top: 20px;
-  position: relative;
-  z-index: 10000;
-  color: var(--gris);
-}
-.headerbar .logo h1:hover::after {
-  content: "";
-  position: relative;
-}
-.headerbar .logo h1:hover::before {
-  content: "NAPOLEON ROMANO";
-  font-size: 1.1rem;
-  margin-left: -85px;
-  display: flex;
-  padding-top: 20px;
-  position: relative;
-  color: var(--gris);
-  
-}
-
-
-/*Termina la animacion del logo*/
-/*  del boton de descarga cv */
-.block-btn-cv {
-  background: #EBEBEB;
-  z-index: 0;
-}
-
-.block-btn-cv button {
-  background: #EBEBEB;
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-  z-index: 0;
-  font-weight: 600;
-  font-family: "Cormorant Garamond", serif;
-}
-
-.block-btn-cv button:hover {
-  background: #EBEBEB;
-  box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.1), inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-  z-index: 0;
-}
-
-.block-cv {
-  display: flex;
-  justify-content: center;
-  padding: 20px 0 105px 0;
-  z-index: 0;
-}
-
-.block-cv button {
-  display: flex;
-  min-width: 225px;
-  padding: 25px 35px;
-  margin: 0 25px;
-  border-radius: 10px;
-  color: #53657D;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  z-index: 0;
-  border: none;
-}
-
-/*Termina el boton de cv*/
-/*Boton Hamburguesa*/
-.headerbar .toggle div {
-  border: none;
-}
-
-.headerbar .toggle .header-hamburguesa-line {
-  background-color: #53657D;
-  border: none;
-  border-radius: 3px;
-  height: 0.2rem;
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-  width: 100%;
-  position: relative;
-  z-index: 0;
+a, li, ul, ol {
   color: #53657D;
 }
 
-.headerbar .toggle .header-hamburguesa:hover .header-hamburguesa-line:nth-child(1) {
-  transform: translateY(9.5px) rotate(45deg);
-  position: relative;
-}
 
-.headerbar .toggle .header-hamburguesa:hover .header-hamburguesa-line:nth-child(2) {
-  opacity: 0;
-  position: relative;
-}
-
-.headerbar .toggle .header-hamburguesa:hover .header-hamburguesa-line:nth-child(3) {
-  transform: translateY(-9.5px) rotate(-45deg);
-  position: relative;
-}
-
-.headerbar .toggle .header-hamburguesa {
-  background-color: transparent;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  height: 22px;
-  justify-content: space-between;
-  padding: 0;
-  position: relative;
-  width: 30px;
-}
 
 /*Termina animacion de hamburguesas*/
-/*header*/
-.header-container {
-  position: relative;
-  width: 100%;
-}
 
-.nav {
-  position: fixed;
-  width: 300px;
-  min-height: 100vh;
-  height: 100vh;
-  box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.1), inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-  background: #EBEBEB;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  transition: width 0.5s;
-  margin-top: -60px;
-  z-index: 100000;
-}
-.nav.active {
-  width: 0;
-}
-.nav ul {
-  /*La pos relative tiene la propiedad de que mantiene un flujo normal del documento lo que guarda su pocicion y mantiene la distancia entre el borde del elemento al borde de su contenedor en la direccion correspondientes*/
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 40px;
-}
-.nav ul li {
-  /*Pongo position relative en todo para que se mantenga una jerarquia*/
-  position: relative;
-  width: 100%;
-  list-style: none;
-}
-.nav ul li a {
-  /*se puede utilizar "z-index" para controlar su elevaciÃ³n en relaciÃ³n con otros elementos. cuando se usa con postion relative*/
-  position: relative;
-  display: block;
-  width: 100%;
-  margin: 10px 0;
-  /*Izq y derecha */
-  white-space: normal;
-  /*"white-space:normal;" es una propiedad CSS que define cÃ³mo se deben manejar los espacios en blanco, en el caso de normal significa que cualquier espacio en blanco adicional, como tabulaciones, espacios y saltos de lÃ­nea, se reducen a un solo espacio. AdemÃ¡s, el texto se ajusta automÃ¡ticamente al ancho del contenedor en el que se encuentra, lo que puede dar lugar a lÃ­neas de texto mÃ¡s largas o mÃ¡s cortas segÃºn la resoluciÃ³n de la pantalla o el tamaÃ±o del contenedor.*/
-  display: flex;
-  text-decoration: none;
-  color: #333;
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  opacity: 0.5;
-  font-style: italic;
-  font-weight: 600;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 24px;
-}
-.nav ul li a:hover {
-  /*Recordar sin el hover disminui su opacidad o trasparencia y aqui la aumento*/
-  opacity: 1;
-  color: #53657D;
-}
 
-header .main {
-  position: absolute;
-  width: calc(100vw - 300px);
-  left: 300px;
-  background: #EBEBEB;
-  min-height: 100vh;
-}
-header .main.active {
-  width: calc(100vw - 0px);
-  left: 0px;
-}
-header .main.active .headerbar {
-  width: calc(100vw - 0px);
-  left: 0px;
-}
-header .main .headerbar {
-  position: fixed;
-  top: 0;
-  width: calc(100vw - 300px);
-  left: 300px;
-  background: #EBEBEB;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-  height: 65px;
-  padding: 0 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100000;
-  transition: width 0.5s, left 0.5s;
-}
-header .main .headerbar.active {
-  width: calc(100vw - 0px);
-  left: 0px;
-}
-header .main .headerbar .logo {
-  position: relative;
-  width: calc(100vw - 300px);
-  height: 60px;
-  width: 250px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  padding-left: 0;
-  color: #333;
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 1.4em;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/*Inicia el Banner*/
-.banner {
-  margin-top: 65px;
-  top: 100px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  left: 150px;
-  padding: 0 20px;
-  transition: width 1s, left 0.5s;
-}
-.banner.active {
-  left: 0;
-}
-.banner img {
-  width: 300px;
-}
-.banner section {
-  min-height: 100vh;
-}
-.banner .contentenedor {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.banner .contentenedor .imgBx {
-  position: relative;
-  width: 230px;
-  height: 230px;
-  overflow: hidden;
-  border-radius: 50%;
-  margin-bottom: -3vh;
-  top: -70px;
-  box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.1), inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7), 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-}
-.banner .contentenedor .imgBx img {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.banner .contentenedor h1 {
-  font-family: "Cormorant Garamond", serif;
-  font-style: italic;
-  position: relative;
-  font-size: 1.4em;
-  color: #53657D;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding-bottom: 5vh;
-}
-.banner .contentenedor p {
-  color: #53657D;
-  padding-bottom: 2vh;
-  font-family: "Source Serif Pro", serif;
-  font-weight: 500;
-  font-style: italic;
-}
-.banner .contentenedor footer {
-  margin-left: -300px;
-  padding-bottom: 5vh;
-}
-.banner .contentenedor .socialMedia {
-  position: absolute;
-  bottom: 5vh;
-  display: flex;
-  list-style: none;
-  gap: 48px;
-}
-.banner .contentenedor .socialMedia li a {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  background: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  text-decoration: none;
-  border-radius: 50%;
-  color: #53657D;
-  background: #EBEBEB;
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-}
-.banner .contentenedor .socialMedia li a:hover {
-  box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.1), inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-}
-.banner .contentenedor .socialMedia .fa {
-  color: rgb(80, 0, 78);
-}
-
-@media screen and (max-width: 578px) {
-  .nav {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    align-items: center;
-    margin-top: -60px;
-    font-size: 23px;
-  }
-  .nav #ul li {
-    top: -60px;
-  }
-  .nav #ul li a {
-    font-size: 36px;
-  }
-  #banner .contentenedor.active {
-    flex-direction: column;
-    top: -7vh;
-  }
-  .contentenedor p {
-    width: 300px;
-    text-align: center;
-    top: 5vh;
-  }
-  #contentenedorid.active {
-    display: flex;
-  }
-  #contentenedorid {
-    margin-top: 23px;
-    display: none;
-  }
-  .block-cv {
-    position: relative;
-    top: -5px;
-  }
-  #headerbar {
-    left: 0px;
-    width: 100vw;
-  }
-  .inicio.active {
-    overflow-y: scroll;
-  }
-  #socialMediaid {
-    bottom: 65px;
-  }
-
-}
-.nav {
-  overflow: hidden;
-}
-
-.hero {
-  padding-top: 0;
-  right: 0;
-
-  min-height: 100vh;
-  background: #EBEBEB;
-  display: flex;
-  margin-right: 300px;
-  transition: 0.5s ease;
-}
-.hero.active {
-  margin-right:0px ;
-  transition: 0.5s ease;
-}
-.hero .detel {
-  display: flex;
-  flex-direction: column;
-  z-index: 10;
-}
-.hero .detel h1 {
-  display: flex;
-  padding-left: 1vw;
-  font-size: 50px;
-  color: #53657D;
-  margin-bottom: 20px;
-  font-family: "Source Serif Pro", serif;
-  font-style: italic;
-}
-.hero .detel p {
-  color: #53657D;
-  line-height: 22px;
-  font-family: "Source Serif Pro", serif;
-  font-style: italic;
-}
-.hero .detel span {
-  margin-left: 20px;
-  font-weight: 200;
-  color: rgb(34, 208, 197);
-}
-.hero .detel .hero-texto {
-  padding: 8px 10px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  margin: 0;
-  z-index: 2;
-}
-.hero .detel .hero-texto .hero-texto1 {
-  width: 35vw;
-  background-color: #EBEBEB;
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-  border-radius: 15px;
-  padding: 0.5vh 2.5vw 0.5vh 2.5vw;
-  padding-bottom: 35px;
-  cursor: move;
-  backdrop-filter: blur(1px);
-  margin-bottom: 3vh;
-}
-.hero .detel .hero-texto .hero-texto1:hover {
-  box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.1), inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-}
-.hero p {
-  color: rgb(27, 55, 63);
-}
-.hero .images {
-  position: absolute;
-  bottom: 0;
-  width: 0;
-  right: 0;
-  max-height: 100%;
-  height: 100%;
-  transition: width 1s, left 0.5s;
-  background-color: red;
-}
-.hero .images.active {
-  position: absolute;
-  bottom: 0;
-  width: -300px;
-  right: 0;
-  max-height: 100%;
-  height: 100%;
-  transition: width 1s, left 0.5s;
-  background-color: red;
-}
-
-.hero .images img {
-  position: absolute;
-  display: flex;
-  min-height: 90%;
-  bottom: 0;
-  transition: bottom 1s, left 1s;
-}
-.hero .images .hero-texturas {
-  position: absolute;
-  height: 100vh;
-  width: 35vw;
-  min-width: 300px;
-  top: 10vh;
-  right: 0;
-  z-index: 10;
-}
-
-.hero .images .hero-retrato {
-  position: absolute;
-  right: 0;
-  width: 55%;
-  min-width: 600px;
-  max-height: 800px;
-  transition: right 1s;
-  z-index: 13;
-}
-.hero .images:hover {
-  .hero-retrato{
-    transform: translateX(-5%);
-    transition: 0.5s ease ;
-  }
-  .hero-texturas{
-    transform:scale(1.2) ;
-    transition: 0.5s ease ;
-  }
-}
-@media screen and (max-width: 1188px) {
-  .images {
-    height: 70vh;
-  }
-
-}
-@media screen and (max-width: 1068px) {
-  .hero{
-    margin: 0;
-    .hero-texto1{
-      width: 50vw !important;
-    }
-  }
-  .images{
-    display: none;
-  }
-  .images.active {
-    display: none;
-  }
-}
-
-}
-@media screen and (max-width: 968px) {
-  .hero {
-    top: -45px;
-  }
-
-  .page-content .detel .hero-texto > div > .hero-texto-div > p.hero-texto1 {
-    margin-left: 1vw;
-    width: 50vw;
-  }
-  .page-content .detel h1 {
-    margin-left: 55px;
-  }
-  .page-content .detel h1 span {
-    display: none;
-  }
-  #herotexto .hero-texto1.active {
-    width: 70vw;
-    margin-left: 5px;
-  }
-  .detel span {
-    display: none;
-  }
-}
-@media screen and (max-width: 568px) {
-  #imagess {
-    background-image: url("/img/extra3.png");
-    background-size: 100vw;
-    background-repeat: no-repeat;
-    background-position: center center;
-    margin-left: -260px;
-    margin-bottom: -360px;
-  }
-  .detel {
-    margin-top: -50px;
-  }
-  .hero {
-    display: none;
-  }
-  .hero.active {
-    display: block;
-  }
-  .sobremi.active {
-    overflow-y: scroll;
-  }
-}
 .carrousel {
   width: 90%;
   margin-top: -50px;
@@ -816,8 +258,6 @@ header .main .headerbar .logo {
   height: 60vh;
   top: -10px;
   border-radius: 50px;
-  caret-color: #53657D ;
-  
 }
 .content.active {
   width: calc(100vw - 0px);
@@ -825,7 +265,6 @@ header .main .headerbar .logo {
 .content .contact-info ul {
   list-style: none;
   padding: 0;
-  caret-color: #53657D ;
 }
 .content .contact-wrapper {
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
@@ -838,21 +277,17 @@ header .main .headerbar .logo {
   color: #53657D;
   font-style: italic;
   font-family: "Cormorant Garamond", serif;
-  caret-color: #53657D ;
 }
 .content .contact-form form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  caret-color: #53657D ;
 }
 .content .contact-form form label {
   display: block;
-  caret-color: #53657D ;
 }
 .content .contact-form form p {
   margin: 0;
   padding: 1em;
-  caret-color: #53657D ;
 }
 .content .contact-form form .block {
   grid-column: 1/3;
@@ -870,13 +305,11 @@ header .main .headerbar .logo {
   outline: 0;
   color: #53657D;
   box-shadow: 0px 2px 0px #53657D;
-  caret-color: #53657D ;
 }
 .content .contact-form form button:focus,
 .content .contact-form form input:focus,
 .content .contact-form form textarea:focus {
   outline: none;
-  caret-color: #53657D ;
 }
 .content .contact-form form button {
   background: #EBEBEB;
@@ -903,6 +336,11 @@ header .main .headerbar .logo {
   text-align: center;
   margin: 0 0 1rem 0;
   font-family: "Cormorant Garamond", serif;
+}
+
+.content .contact-form input, 
+.content .contact-form textarea{
+  caret-color: #53657D;
 }
 
 @media screen and (min-width: 700px) {
@@ -952,10 +390,9 @@ header .main .headerbar .logo {
     width: 80vw;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
-/* Evitar que la barra de escritura aparezca al tocar cualquier cosa */
-*:focus {
-  outline: none; /* Elimina la línea de selección */
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Evita el resaltado al tocar */
+@media screen and (max-height: 675px) {
+  body{
+    overflow-y:scroll;
+  }
 }
+/*# sourceMappingURL=style.css.map */

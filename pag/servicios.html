@@ -17,6 +17,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--El link de abajo es para un conjunto de iconos, es como los iconos de  boostrap pero no se si se pueden usar asi que no los uso -->
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/menu.css">
 
     <title>Napoelón | Almacenamiento de datos, argentina cordoba programacion, diseñador web, diseñador</title>
 </head>
@@ -87,24 +88,7 @@
             </div>
         </div>
     </div>
-    <script>
-        let headerbar = document.querySelector('.headerbar');
-        let nav = document.querySelector(' .nav');
-        let main = document.querySelector(' .main');
-        let banner = document.querySelector(' .banner');
-        let toggle = document.querySelector('.toggle');
-        let servicios = document.querySelector('.servicios');
-        let contenedorservicios = document.querySelector(' .contenedor-servicios');
-        toggle.onclick = function () {
-            toggle.classList.toggle('active');
-            headerbar.classList.toggle('active');
-            nav.classList.toggle('active');
-            main.classList.toggle('active');
-            banner.classList.toggle('active');
-            servicios.classList.toggle('active');
-            contenedorservicios.classList.toggle('active');
-        }
-    </script>
+    <script src="../js/servicios.js"></script>
 </body>
 
 

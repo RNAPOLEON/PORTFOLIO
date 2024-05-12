@@ -1,0 +1,331 @@
+/*header*/
+
+.header-container {
+    position: relative;
+    width: 100%;
+}
+
+
+header .main {
+    position: absolute;
+    width: calc(100vw - 300px);
+    left: 300px;
+    background: #EBEBEB;
+    min-height: 100vh;
+
+    &.active {
+        width: calc(100vw - 0px);
+        left: 0px;
+
+        .headerbar {
+            width: calc(100vw - 0px);
+            left: 0px;
+        }
+    }
+
+    .headerbar {
+        position: fixed;
+        top: 0;
+        width: calc(100vw - 300px);
+        left: 300px;
+        background: #EBEBEB;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+        height: 4rem;
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 900000;
+        transition: width 0.5s, left 0.5s;
+
+        &.active {
+            width: calc(100vw - 0px);
+            left: 0px;
+            z-index: 900000;
+        }
+
+        .logo {
+            position: relative;
+            height: 60px;
+            width: 250px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            padding-left: 0;
+            color: #333;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1.4em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+
+.nav {
+    position: fixed;
+    width: 300px;
+    min-height: 100vh;
+    height: 100vh;
+    box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.1), inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    background: #EBEBEB;
+    margin-top: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: width 0.5s;
+    z-index: 100000;
+
+    &.active {
+        width: 0;
+    }
+
+    ul {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 300px;
+        padding: 20px 40px;
+
+        li {
+            position: relative;
+            width: 300px;
+            list-style: none;
+
+            a {
+                position: relative;
+                display: block;
+                width: 300px;
+                margin: 10px 0;
+                white-space: normal;
+                display: flex;
+                text-decoration: none;
+                color: #878b91;
+                font-size: 29px;
+                font-weight: 600;
+                font-family: "Cormorant Garamond", serif;
+
+                &:hover {
+                    opacity: 1;
+                    color: #53657D;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 578px) {
+    .nav {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        align-items: center;
+        font-size: 23px;
+    }
+
+    .nav #ul li {
+        top: -60px;
+    }
+
+    .nav #ul li a {
+        font-size: 36px;
+    }
+
+    #banner .contentenedor.active {
+        flex-direction: column;
+        top: -7vh;
+    }
+
+    .contentenedor p {
+        width: 300px;
+        text-align: center;
+        top: 5vh;
+    }
+
+    #contentenedorid.active {
+        display: flex;
+    }
+
+    #contentenedorid {
+        margin-top: 23px;
+        display: none;
+    }
+
+    .block-cv {
+        position: relative;
+        top: -5px;
+    }
+
+    #headerbar {
+        left: 0px;
+        width: 100vw;
+    }
+
+    .inicio.active {
+        overflow-y: scroll;
+    }
+
+    #socialMediaid {
+        bottom: 65px;
+    }
+
+    .banner .contentenedor .imgBx {
+        width: 210px;
+        height: 210px;
+    }
+}
+
+.nav {
+    overflow: hidden;
+}
+
+/*Animacion del Inicio o index*/
+.headerbar .logo h1::after {
+    content: "CODERBY";
+    font-size: 1.3rem;
+    margin-left: -140px;
+    display: flex;
+    padding-top: 20px;
+    position: relative;
+    z-index: 10000;
+    color: #53657D;
+}
+
+.headerbar .logo h1:hover::after {
+    content: "";
+    position: relative;
+}
+
+.headerbar .logo h1:hover::before {
+    content: "NAPOLEON ROMANO";
+    font-size: 1.3rem;
+    margin-left: -55px;
+    display: flex;
+    padding-top: 20px;
+    position: relative;
+    color: #53657D;
+    text-align: end;
+}
+
+
+/*Termina el boton de cv*/
+/*Boton Hamburguesa*/
+.headerbar {
+    .toggle {
+        div {
+            border: none;
+        }
+
+        .header-hamburguesa-line {
+            background-color: #53657D;
+            border: none;
+            border-radius: 3px;
+            height: 0.2rem;
+            transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+            width: 100%;
+            position: relative;
+            z-index: 0;
+            color: #53657D;
+        }
+
+        .header-hamburguesa {
+            background-color: transparent;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            height: 22px;
+            justify-content: space-between;
+            padding: 0;
+            position: relative;
+            width: 30px;
+        }
+    }
+}
+
+
+.headerbar .toggle .header-hamburguesa:hover .header-hamburguesa-line:nth-child(1) {
+    transform: translateY(9.5px) rotate(45deg);
+    position: relative;
+}
+
+.headerbar .toggle .header-hamburguesa:hover .header-hamburguesa-line:nth-child(2) {
+    opacity: 0;
+    position: relative;
+}
+
+.headerbar .toggle .header-hamburguesa:hover .header-hamburguesa-line:nth-child(3) {
+    transform: translateY(-9.5px) rotate(-45deg);
+    position: relative;
+}
+
+
+@media screen and (max-width: 578px) {
+    .nav {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        align-items: center;
+        font-size: 23px;
+    }
+
+    .nav #ul li {
+        top: -60px;
+    }
+
+    .nav #ul li a {
+        font-size: 36px;
+    }
+
+    #banner .contentenedor.active {
+        flex-direction: column;
+        top: -7vh;
+    }
+
+    .contentenedor p {
+        width: 300px;
+        text-align: center;
+        top: 5vh;
+    }
+
+    #contentenedorid.active {
+        display: flex;
+    }
+
+    #contentenedorid {
+        margin-top: 23px;
+        display: none;
+    }
+
+    .block-cv {
+        position: relative;
+        top: -5px;
+    }
+
+    #headerbar {
+        left: 0px;
+        width: 100vw;
+    }
+
+    .inicio.active {
+        overflow-y: scroll;
+    }
+
+    #socialMediaid {
+        bottom: 65px;
+    }
+
+    .banner .contentenedor .imgBx {
+        width: 210px;
+        height: 210px;
+    }
+}
+
+.nav {
+    overflow: hidden;
+}

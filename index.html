@@ -17,9 +17,19 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/index.css">
     <title>Napoelóm | Portafolios programador web </title>
 </head>
-
+<!-- IMPORTANTE -->
+<!-- He diseñado mi código para incluir un segundo body dentro del banner. 
+    todo el contenido se encuentra dentro de este banner, excepto la parte del nav y el header,
+    lo que significa que no se puede utilizar el footer fuera del banner.
+    También he tenido dudas sobre si debería incluir la carpeta scss en el archivo gitignore,
+    ya que esto podría impedir que alguien pueda ver si he implementado correctamente el código scss y
+    debo recalcar que la etiqueta <h1> esta vacía ya que tiene una animación que cambia de CODERBY a NAPOLEON
+    por lo que a la hora de visualizarla tiene contenido pero es agregado a partir del css .-->
+<!-- IMPORTANTE -->
 
 <body class="inicio">
     <header class="header-container">
@@ -28,7 +38,7 @@
                 <li><a title="index" href="index.html">Inicio</a></li>
                 <li><a title="sobremi" href="./pag/sobremi.html">Sobre mi</a></li>
                 <li><a title="proyectos" href="./pag/proyectos.html">Proyectos</a></li>
-                <li><a title="servicios" href="./pag/servicios.html">Servicios</a></li>
+
                 <li><a title="contacto" href="./pag/contacto.html">Contacto</a></li>
             </ul>
         </nav>
@@ -59,13 +69,13 @@
             </div>
             <footer>
                 <ul class="socialMedia" id="socialMediaid">
-                    <li><a href="https://mail.google.com" title="gmail" target="_blank"><i aria-hidden="true"
+                    <li><a href="https://mail.google.com"  title="gmail" target="_blank"><i aria-hidden="true"
                                 class="fa fa-google"></i></a></li>
-                    <li><a href="https://twitter.com" title="twitter" target="_blank"><i aria-hidden="true"
+                    <li><a href="https://twitter.com"  title="twitter" target="_blank"><i aria-hidden="true"
                                 class="fa fa-twitter"></i></a></li>
                     <li><a href="https://www.linkedin.com" title="linkedin" target="_blank"><i aria-hidden="true"
                                 class="fa fa-linkedin"></i></a></li>
-                    <li><a href="https://github.com/" title="github" target="_blank"><i aria-hidden="true"
+                    <li><a href="https://github.com/"  title="github" target="_blank"><i aria-hidden="true"
                                 class="fa fa-github"></i></a></li>
                 </ul>
 
@@ -73,34 +83,8 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        document.getElementById('btnDescargar').addEventListener('click', function () {
-            var pdfUrl = "../img/romanocv.pdf"; 
-            var fileName = 'romanocv.pdf'; 
-
-            var a = document.createElement('a');
-            a.href = pdfUrl;
-            a.download = fileName;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        });
-        let headerbar = document.querySelector('.headerbar');
-        let nav = document.querySelector(' .nav');
-        let main = document.querySelector(' .main');
-        let banner = document.querySelector(' .banner');
-        let toggle = document.querySelector('.toggle');
-        let contentenedor = document.querySelector(' .contentenedor');
-        let inicio = document.querySelector(' .inicio');
-        toggle.onclick = function () {
-            toggle.classList.toggle('active');
-            headerbar.classList.toggle('active');
-            nav.classList.toggle('active');
-            main.classList.toggle('active');
-            banner.classList.toggle('active');
-            contentenedor.classList.toggle('active');
-            inicio.classList.toggle('active');
-        }
+    <script src="./js/index.js">
+       
     </script>
 </body>
 

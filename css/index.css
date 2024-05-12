@@ -1,0 +1,150 @@
+
+/*Inicia el Banner*/
+.banner {
+    top: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 150px;
+    padding: 0 20px;
+    transition: width 1s, left 0.5s;
+
+    &.active {
+        left: 0;
+    }
+
+    img {
+        width: 300px;
+    }
+
+    section {
+        min-height: 100vh;
+    }
+
+    .contentenedor {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .imgBx {
+            position: relative;
+            width: 27vh;
+            height: 27vh;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-top: 4.5rem;
+            margin-bottom: -3vh;
+            top: -70px;
+            box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.1), inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7), 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+
+            img {
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        h1 {
+            font-family: "Cormorant Garamond", serif;
+            font-style: italic;
+            position: relative;
+            font-size: 1.5rem;
+            color: #53657D;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding-bottom: 5vh;
+        }
+
+        p {
+            color: #53657D;
+            padding-bottom: 2vh;
+            font-family: "Source Serif Pro", serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        footer {
+
+        }
+
+        .socialMedia {
+            bottom: 2vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            gap: 4rem;
+
+            li a {
+                display: flex;
+                width: 2.4rem;
+                height: 2.4rem;
+                background: #333;
+                margin-bottom: 2rem;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                text-decoration: none;
+                border-radius: 50%;
+                color: #53657D;
+                background: #EBEBEB;
+                box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+                scale: 1.2;
+                gap: 5rem;
+
+                &:hover {
+                    box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.1), inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+                }
+            }
+
+            .fa {
+                color: rgb(80, 0, 78);
+            }
+        }
+    }
+}
+
+.block-btn-cv,
+.block-cv {
+    background: #EBEBEB;
+
+    button {
+        background: #EBEBEB;
+        box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+        font-weight: 600;
+        font-family: "Cormorant Garamond", serif;
+
+        &:hover {
+            box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.1), inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+        }
+    }
+}
+
+.block-cv {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 80px 0;
+
+    button {
+        width: 15rem;
+        padding: 25px 35px;
+        margin: 0 25px;
+        border-radius: 10px;
+        color: #53657D;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        border: none;
+    }
+
+    #btnDescargar {
+        scale: 1;
+        margin-top: 1rem;
+    }
+}

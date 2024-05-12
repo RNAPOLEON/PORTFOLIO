@@ -13,6 +13,9 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&family=Raleway:ital,wght@0,200;0,500;1,200;1,500&family=Source+Serif+Pro:ital,wght@0,300;1,300;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/sobremi.css">
+
     <title>Sobre mi | Programador web </title>
 </head>
 
@@ -24,7 +27,7 @@
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="sobremi.html">Sobre mi</a></li>
                 <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
+
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
@@ -46,7 +49,7 @@
     <div class="banner" id="banner">
         <div class="hero">
             <main class="detel">
-                <h1> <strong> I'm Romano</strong> <span>Napoleon</span> </h1>
+                <h1> <strong> I'm Romano</strong> <span class="trasparent">tr</span><span>Napoleon</span> </h1>
                 <div class="hero-texto">
                     <div class="hero-texto-div" id="herotexto">
                         <p class="hero-texto1">
@@ -56,7 +59,8 @@
                             Córdoba, donde estoy aprendiendo y creciendo como estudiante y profesional.
                         </p>
                         <p class="hero-texto1 hero-texto2">
-                            Lenguajes de programación: <br> <br> Haskell , C/C++ , JS , React , MongoDB , Firbase
+                            Lenguajes de programación: <br> <br> Haskell y C/C++ universitario
+                            HTML/CSS intermedio
                         </p>
                     </div>
                 </div>
@@ -68,32 +72,8 @@
         </div>
     </div>
 
-    <script>
-        let headerbar = document.querySelector('.headerbar');
-        let nav = document.querySelector(' .nav');
-        let main = document.querySelector(' .main');
-        let banner = document.querySelector(' .banner');
-        let toggle = document.querySelector('.toggle');
-        let hero = document.querySelector(' .hero');
-        let images = document.querySelector(' .images');
-        let detel = document.querySelector(' .detel');
-        let herotexto1 = document.querySelector(' .hero-texto1');
-        let herotexto2 = document.querySelector(' .hero-texto2');
-        let sobremi = document.querySelector(' .sobremi');
-        toggle.onclick = function () {
-            toggle.classList.toggle('active');
-            headerbar.classList.toggle('active');
-            nav.classList.toggle('active');
-            main.classList.toggle('active');
-            banner.classList.toggle('active');
-            hero.classList.toggle('active');
-            images.classList.toggle('active');
-            detel.classList.toggle('active');
-            herotexto1.classList.toggle('active');
-            herotexto2.classList.toggle('active');
-            sobremi.classList.toggle('active');
-
-        }
+    <script src="../js/sobremi.js">
+        
     </script>
 
 
