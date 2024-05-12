@@ -137,6 +137,10 @@
 
     .hero .detel{
         width: calc(100vw - 8rem );
+        h1{
+            width: 120vw;
+            font-size: 1.7rem;
+        }
     }
 
 }

@@ -1,0 +1,136 @@
+.carrousel {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin-top: 4rem;
+    max-width: 120em;
+    color: #333;
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: #EBEBEB;
+    overflow: hidden;
+}
+
+.carrousel li {
+    list-style-type: none;
+}
+
+.carrousel form,
+.carrousel input,
+.carrousel textarea,
+.carrousel select,
+.carrousel button {
+    hyphens: auto;
+    background-color: transparent;
+    display: block;
+}
+
+.carrousel .grande {
+    margin-top: -25px;
+    width: 400vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: #EBEBEB;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    padding: 2em;
+    transition: all 0.5s ease;
+    transform: translateX(0%);
+}
+
+.carrousel .img {
+    width: calc(100vw - 4rem);
+    min-width: 50vw;
+    min-height: 30vh;
+    max-height: 70vh;
+    color: #333;
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: #EBEBEB;
+    box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.1), inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.carrousel .imgmovil {
+    display: none;
+}
+
+.carrousel .puntos {
+    width: 100vw;
+    height: 4rem;
+    margin: 1em 0 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.carrousel .puntos .punto {
+    width: 45px;
+    height: 45px;
+    color: #333;
+    transition: all 0.4s ease;
+    background-color: #EBEBEB;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    pointer-events: auto;
+    z-index: 9999999999999;
+}
+
+.carrousel .puntos .punto.activo {
+    box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.1), inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+@media screen and (min-width: 801px) {
+    .titulocarrusel {
+        color: transparent;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .banner h2 {
+        position: absolute;
+        top: -13vh;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .banner h2 {
+        left: 3vw;
+        display: none;
+    }
+
+    .banner.active h2 {
+        display: block;
+    }
+
+    .carrousel {
+        display: none;
+    }
+
+    .carrousel.active {
+        display: block;
+    }
+
+    .puntos {
+        left: 25vw;
+    }
+
+    .imgcompleta {
+        display: none;
+    }
+
+    #imgmovill {
+        display: flex;
+        min-height: 45vh;
+    }
+
+    #imgmovilll {
+        display: flex;
+        min-height: 45vh;
+    }
+}
